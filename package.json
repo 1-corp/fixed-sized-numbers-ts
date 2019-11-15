@@ -12,8 +12,7 @@
     "compile": "tsc -p .",
     "fix": "node_modules/.bin/tslint -c tslint.json '*/*.ts' --fix",
     "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run lint"
+    "pretest": "npm run compile"
   },
   "author": "",
   "license": "ISC",
