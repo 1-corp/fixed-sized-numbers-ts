@@ -46,12 +46,12 @@ const Int128 = (value?: string | BigNumber): Int128 => IntFactory<Int128>(128)({
 const Int256 = (value?: string | BigNumber): Int256 => IntFactory<Int256>(256)({_int256: true})(value);
 
 // Type Checkers
-const isInt8 = (x: Int): x is Int8 => (x as Int8)._int8;
-const isInt16 = (x: Int): x is Int16 => (x as Int16)._int16;
-const isInt32 = (x: Int): x is Int32 => (x as Int32)._int32;
-const isInt64 = (x: Int): x is Int64 => (x as Int64)._int64;
-const isInt128 = (x: Int): x is Int128 => (x as Int128)._int128;
-const isInt256 = (x: Int): x is Int256 => (x as Int256)._int256;
+export const isInt8 = (x: Int): x is Int8 => (x as Int8)._int8;
+export const isInt16 = (x: Int): x is Int16 => (x as Int16)._int16;
+export const isInt32 = (x: Int): x is Int32 => (x as Int32)._int32;
+export const isInt64 = (x: Int): x is Int64 => (x as Int64)._int64;
+export const isInt128 = (x: Int): x is Int128 => (x as Int128)._int128;
+export const isInt256 = (x: Int): x is Int256 => (x as Int256)._int256;
 
 export {
     Int8,
@@ -60,10 +60,4 @@ export {
     Int64,
     Int128,
     Int256,
-    isInt8,
-    isInt16,
-    isInt32,
-    isInt64,
-    isInt128,
-    isInt256,
 };

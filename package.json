@@ -1,8 +1,10 @@
 {
-  "name": "typescript-experiment",
-  "version": "1.0.0",
+  "name": "@1-corp/fixed-size-numbers-ts",
+  "version": "1.0.1",
   "description": "",
-  "main": "lib/UnsignedNumber.js",
+  "main": "lib/index.ts",
+  "types": "lib/index.d.ts",
+  "private": false,
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "test": "mocha ./tests/*.js",
@@ -10,8 +12,7 @@
     "compile": "tsc -p .",
     "fix": "node_modules/.bin/tslint -c tslint.json '*/*.ts' --fix",
     "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run lint"
+    "pretest": "npm run compile"
   },
   "author": "",
   "license": "ISC",
