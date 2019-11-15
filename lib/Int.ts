@@ -59,5 +59,5 @@ export {
     Int32,
     Int64,
     Int128,
-    Int256
+    Int256,
 };
