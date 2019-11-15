@@ -1,34 +1,34 @@
 import BigNumber from "bignumber.js";
 
-interface MetaInteger {
+export interface MetaInteger {
     _value: BigNumber;
     _size: number;
     validateSize(a: MetaInteger);
 }
 
 
-interface Uint8 extends MetaInteger {
+export interface Uint8 extends MetaInteger {
     _uint8: boolean;
     add(n: Uint8): Uint8;
     sub(n: Uint8): Uint8;
     mul(n: Uint8): Uint8;
     div(n: Uint8): Uint8;
 }
-interface Uint16 extends MetaInteger {
+export interface Uint16 extends MetaInteger {
     _uint16: boolean;
     add(n: Uint16): Uint16;
     sub(n: Uint16): Uint16;
     mul(n: Uint16): Uint16;
     div(n: Uint16): Uint16;
 }
-interface Uint32 extends MetaInteger {
+export interface Uint32 extends MetaInteger {
     _uint32: boolean;
     add(n: Uint32): Uint32;
     sub(n: Uint32): Uint32;
     mul(n: Uint32): Uint32;
     div(n: Uint32): Uint32;
 }
-interface Uint64 extends MetaInteger {
+export interface Uint64 extends MetaInteger {
     _uint64: boolean;
     add(n: Uint64): Uint64;
     sub(n: Uint64): Uint64;
@@ -36,7 +36,7 @@ interface Uint64 extends MetaInteger {
     div(n: Uint64): Uint64;
 }
 
-interface Uint128 extends MetaInteger {
+export interface Uint128 extends MetaInteger {
     _uint128: boolean;
     add(n: Uint128): Uint128;
     sub(n: Uint128): Uint128;
@@ -44,7 +44,7 @@ interface Uint128 extends MetaInteger {
     div(n: Uint128): Uint128;
 }
 
-interface Uint256 extends MetaInteger {
+export interface Uint256 extends MetaInteger {
     _uint256: boolean;
     add(n: Uint256): Uint256;
     sub(n: Uint256): Uint256;
@@ -52,9 +52,9 @@ interface Uint256 extends MetaInteger {
     div(n: Uint256): Uint256;
 }
 
-type Uint = Uint8 | Uint16 | Uint32 | Uint64 | Uint128 | Uint256;
+export type Uint = Uint8 | Uint16 | Uint32 | Uint64 | Uint128 | Uint256;
 
-interface Int8 extends MetaInteger {
+export interface Int8 extends MetaInteger {
     _int8: boolean;
     _isPositive: boolean;
     add(n: Int8): Int8;
@@ -62,7 +62,7 @@ interface Int8 extends MetaInteger {
     mul(n: Int8): Int8;
     div(n: Int8): Int8;
 }
-interface Int16 extends MetaInteger {
+export interface Int16 extends MetaInteger {
     _int16: boolean;
     _isPositive: boolean;
     add(n: Int16): Int16;
@@ -70,7 +70,7 @@ interface Int16 extends MetaInteger {
     mul(n: Int16): Int16;
     div(n: Int16): Int16;
 }
-interface Int32 extends MetaInteger {
+export interface Int32 extends MetaInteger {
     _int32: boolean;
     _isPositive: boolean;
     add(n: Int32): Int32;
@@ -78,7 +78,7 @@ interface Int32 extends MetaInteger {
     mul(n: Int32): Int32;
     div(n: Int32): Int32;
 }
-interface Int64 extends MetaInteger {
+export interface Int64 extends MetaInteger {
     _int64: boolean;
     _isPositive: boolean;
     add(n: Int64): Int64;
@@ -87,7 +87,7 @@ interface Int64 extends MetaInteger {
     div(n: Int64): Int64;
 }
 
-interface Int128 extends MetaInteger {
+export interface Int128 extends MetaInteger {
     _int128: boolean;
     _isPositive: boolean;
     add(n: Int128): Int128;
@@ -96,7 +96,7 @@ interface Int128 extends MetaInteger {
     div(n: Int128): Int128;
 }
 
-interface Int256 extends MetaInteger {
+export interface Int256 extends MetaInteger {
     _int256: boolean;
     _isPositive: boolean;
     add(n: Int256): Int256;
@@ -105,23 +105,4 @@ interface Int256 extends MetaInteger {
     div(n: Int256): Int256;
 }
 
-type Int = Int8 | Int16 | Int32 | Int64 | Int128 | Int256 ;
-
-
-export {
-    MetaInteger,
-    Uint8,
-    Uint16,
-    Uint32,
-    Uint64,
-    Uint128,
-    Uint256,
-    Uint,
-    Int8,
-    Int16,
-    Int32,
-    Int64,
-    Int128,
-    Int256,
-    Int,
-};
+export type Int = Int8 | Int16 | Int32 | Int64 | Int128 | Int256 ;

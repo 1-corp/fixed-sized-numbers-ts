@@ -2,7 +2,7 @@
   "name": "@1-corp/fixed-size-numbers-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/UnsignedNumber.js",
+  "main": "lib/",
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "test": "mocha ./tests/*.js",

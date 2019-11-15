@@ -49,12 +49,12 @@ const Uint128 = (value?: string | BigNumber): Uint128 => UintFactory<Uint128>(12
 const Uint256 = (value?: string | BigNumber): Uint256 => UintFactory<Uint256>(256)({_uint256: true})(value);
 
 // Type Checkers
-const isUint8 = (x: Uint): x is Uint8 => (x as Uint8)._uint8;
-const isUint16 = (x: Uint): x is Uint16 => (x as Uint16)._uint16;
-const isUint32 = (x: Uint): x is Uint32 => (x as Uint32)._uint32;
-const isUint64 = (x: Uint): x is Uint64 => (x as Uint64)._uint64;
-const isUint128 = (x: Uint): x is Uint128 => (x as Uint128)._uint128;
-const isUint256 = (x: Uint): x is Uint256 => (x as Uint256)._uint256;
+export const isUint8 = (x: Uint): x is Uint8 => (x as Uint8)._uint8;
+export const isUint16 = (x: Uint): x is Uint16 => (x as Uint16)._uint16;
+export const isUint32 = (x: Uint): x is Uint32 => (x as Uint32)._uint32;
+export const isUint64 = (x: Uint): x is Uint64 => (x as Uint64)._uint64;
+export const isUint128 = (x: Uint): x is Uint128 => (x as Uint128)._uint128;
+export const isUint256 = (x: Uint): x is Uint256 => (x as Uint256)._uint256;
 
 export {
     Uint8,
@@ -63,10 +63,4 @@ export {
     Uint64,
     Uint128,
     Uint256,
-    isUint8,
-    isUint16,
-    isUint32,
-    isUint64,
-    isUint128,
-    isUint256,
 };

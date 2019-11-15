@@ -1,6 +1,5 @@
 import BigNumber from "bignumber.js";
 import { TypeNotSupportedError } from "../errors";
-import { MetaInteger } from "../Interfaces";
 
 const getSize = (num) => {
     if (typeof num === "string") { return getStringNumberSize(num);
