@@ -1,6 +1,6 @@
 {
   "name": "@1-corp/fixed-size-numbers-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "lib/index.ts",
   "types": "lib/index.d.ts",
@@ -14,19 +14,23 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1-corp/fixed-sized-numbers-ts/"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bignumber.js": "^9.0.0"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.10",
+    "@types/chai": "^4.2.5",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.8",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "~3.1.0"
+    "ts-node": "^8.5.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2"
   }
 }
