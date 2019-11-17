@@ -10,7 +10,7 @@ import {
     Uint32Face,
     Uint64Face,
     Uint128Face,
-    Uint256Face,
+    Uint256Face, PreBigInteger,
 } from "./Interfaces";
 
 import { NegativeUnsignedError } from "./errors";
@@ -36,17 +36,17 @@ const UintFactory = <T>(size: number) => (identifier: object) => pipe(
     Object.freeze,
 );
 
-export const Uint8 = (value?: string | BigNumber): Uint8Face => UintFactory<Uint8Face>(8)({_uint8: true})(value);
+export const Uint8 = (value?: PreBigInteger): Uint8Face => UintFactory<Uint8Face>(8)({_uint8: true})(value);
 
-export const Uint16 = (value?: string | BigNumber): Uint16Face => UintFactory<Uint16Face>(16)({_uint16: true})(value);
+export const Uint16 = (value?: PreBigInteger): Uint16Face => UintFactory<Uint16Face>(16)({_uint16: true})(value);
 
-export const Uint32 = (value?: string | BigNumber): Uint32Face => UintFactory<Uint32Face>(32)({_uint32: true})(value);
+export const Uint32 = (value?: PreBigInteger): Uint32Face => UintFactory<Uint32Face>(32)({_uint32: true})(value);
 
-export const Uint64 = (value?: string | BigNumber): Uint64Face => UintFactory<Uint64Face>(64)({_uint64: true})(value);
+export const Uint64 = (value?: PreBigInteger): Uint64Face => UintFactory<Uint64Face>(64)({_uint64: true})(value);
 
-export const Uint128 = (value?: string | BigNumber): Uint128Face => UintFactory<Uint128Face>(128)({_uint128: true})(value);
+export const Uint128 = (value?: PreBigInteger): Uint128Face => UintFactory<Uint128Face>(128)({_uint128: true})(value);
 
-export const Uint256 = (value?: string | BigNumber): Uint256Face => UintFactory<Uint256Face>(256)({_uint256: true})(value);
+export const Uint256 = (value?: PreBigInteger): Uint256Face => UintFactory<Uint256Face>(256)({_uint256: true})(value);
 
 // Type Checkers
 export const isUint8 = (x: Uint): x is Uint8Face => (x as Uint8Face)._uint8;

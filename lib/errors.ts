@@ -40,4 +40,8 @@ export class DivisionByZeroError extends Error {
         super("Division by zero.");
     }
 }
-
+export class UseBigNumberError extends Error {
+    constructor() {
+        super("Type `number` used, but value does not fit in int32");
+    }
+}

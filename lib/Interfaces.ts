@@ -6,6 +6,7 @@ export interface MetaInteger {
     validateSize(a: MetaInteger);
 }
 
+export type PreBigInteger = string | BigNumber | number;
 
 export interface Uint8Face extends MetaInteger {
     _uint8: boolean;

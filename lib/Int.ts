@@ -11,7 +11,7 @@ import {
     Int64Face,
     Int128Face,
     Int256Face,
-    MetaInteger,
+    MetaInteger, PreBigInteger,
 } from "./Interfaces";
 
 import { bigNumberOrThrowError, pipe } from "./utils/utils";
@@ -33,17 +33,17 @@ const IntFactory = <T>(size: number) => (identifier: object) => pipe(
     Object.freeze,
 );
 
-export const Int8 = (value?: string | BigNumber): Int8Face => IntFactory<Int8Face>(8)({_int8: true})(value);
+export const Int8 = (value?: PreBigInteger): Int8Face => IntFactory<Int8Face>(8)({_int8: true})(value);
 
-export const Int16 = (value?: string | BigNumber): Int16Face => IntFactory<Int16Face>(16)({_int16: true})(value);
+export const Int16 = (value?: PreBigInteger): Int16Face => IntFactory<Int16Face>(16)({_int16: true})(value);
 
-export const Int32 = (value?: string | BigNumber): Int32Face => IntFactory<Int32Face>(32)({_int32: true})(value);
+export const Int32 = (value?: PreBigInteger): Int32Face => IntFactory<Int32Face>(32)({_int32: true})(value);
 
-export const Int64 = (value?: string | BigNumber): Int64Face => IntFactory<Int64Face>(64)({_int64: true})(value);
+export const Int64 = (value?: PreBigInteger): Int64Face => IntFactory<Int64Face>(64)({_int64: true})(value);
 
-export const Int128 = (value?: string | BigNumber): Int128Face => IntFactory<Int128Face>(128)({_int128: true})(value);
+export const Int128 = (value?: PreBigInteger): Int128Face => IntFactory<Int128Face>(128)({_int128: true})(value);
 
-export const Int256 = (value?: string | BigNumber): Int256Face => IntFactory<Int256Face>(256)({_int256: true})(value);
+export const Int256 = (value?: PreBigInteger): Int256Face => IntFactory<Int256Face>(256)({_int256: true})(value);
 
 // Type Checkers
 export const isInt8 = (x: Int): x is Int8Face => (x as Int8Face)._int8;
