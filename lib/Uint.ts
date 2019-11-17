@@ -5,12 +5,12 @@ BigNumber.config({
 
 import {
     Uint,
-    Uint8,
-    Uint16,
-    Uint32,
-    Uint64,
-    Uint128,
-    Uint256,
+    Uint8Face,
+    Uint16Face,
+    Uint32Face,
+    Uint64Face,
+    Uint128Face,
+    Uint256Face,
 } from "./Interfaces";
 
 import { NegativeUnsignedError } from "./errors";
@@ -36,31 +36,22 @@ const UintFactory = <T>(size: number) => (identifier: object) => pipe(
     Object.freeze,
 );
 
-const Uint8 = (value?: string | BigNumber): Uint8 => UintFactory<Uint8>(8)({_uint8: true})(value);
+export const Uint8 = (value?: string | BigNumber): Uint8Face => UintFactory<Uint8Face>(8)({_uint8: true})(value);
 
-const Uint16 = (value?: string | BigNumber): Uint16 => UintFactory<Uint16>(16)({_uint16: true})(value);
+export const Uint16 = (value?: string | BigNumber): Uint16Face => UintFactory<Uint16Face>(16)({_uint16: true})(value);
 
-const Uint32 = (value?: string | BigNumber): Uint32 => UintFactory<Uint32>(32)({_uint32: true})(value);
+export const Uint32 = (value?: string | BigNumber): Uint32Face => UintFactory<Uint32Face>(32)({_uint32: true})(value);
 
-const Uint64 = (value?: string | BigNumber): Uint64 => UintFactory<Uint64>(64)({_uint64: true})(value);
+export const Uint64 = (value?: string | BigNumber): Uint64Face => UintFactory<Uint64Face>(64)({_uint64: true})(value);
 
-const Uint128 = (value?: string | BigNumber): Uint128 => UintFactory<Uint128>(128)({_uint128: true})(value);
+export const Uint128 = (value?: string | BigNumber): Uint128Face => UintFactory<Uint128Face>(128)({_uint128: true})(value);
 
-const Uint256 = (value?: string | BigNumber): Uint256 => UintFactory<Uint256>(256)({_uint256: true})(value);
+export const Uint256 = (value?: string | BigNumber): Uint256Face => UintFactory<Uint256Face>(256)({_uint256: true})(value);
 
 // Type Checkers
-export const isUint8 = (x: Uint): x is Uint8 => (x as Uint8)._uint8;
-export const isUint16 = (x: Uint): x is Uint16 => (x as Uint16)._uint16;
-export const isUint32 = (x: Uint): x is Uint32 => (x as Uint32)._uint32;
-export const isUint64 = (x: Uint): x is Uint64 => (x as Uint64)._uint64;
-export const isUint128 = (x: Uint): x is Uint128 => (x as Uint128)._uint128;
-export const isUint256 = (x: Uint): x is Uint256 => (x as Uint256)._uint256;
-
-export {
-    Uint8,
-    Uint16,
-    Uint32,
-    Uint64,
-    Uint128,
-    Uint256,
-};
+export const isUint8 = (x: Uint): x is Uint8Face => (x as Uint8Face)._uint8;
+export const isUint16 = (x: Uint): x is Uint16Face => (x as Uint16Face)._uint16;
+export const isUint32 = (x: Uint): x is Uint32Face => (x as Uint32Face)._uint32;
+export const isUint64 = (x: Uint): x is Uint64Face => (x as Uint64Face)._uint64;
+export const isUint128 = (x: Uint): x is Uint128Face => (x as Uint128Face)._uint128;
+export const isUint256 = (x: Uint): x is Uint256Face => (x as Uint256Face)._uint256;

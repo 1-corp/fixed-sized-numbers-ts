@@ -1,9 +1,8 @@
-import {Uint8, Uint16, Uint32, Uint64, Uint128, Uint256} from "../lib/Uint";
 import {Uint} from "../lib/Interfaces";
-import {Int128, Int16, Int256, Int32, Int64, Int8} from "../lib/Int";
 import {Int} from "../lib/Interfaces";
 import BigNumber from "bignumber.js";
 import {InvalidSizeError, NegativeUnsignedError} from "../lib/errors";
+import {Uint8, Uint16, Uint32, Uint64, Uint128, Uint256, Int8, Int16, Int32, Int64, Int128, Int256} from "../lib";
 
 /**
  * The type-specific data that is available within a Uint test.

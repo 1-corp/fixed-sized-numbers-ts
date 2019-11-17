@@ -7,102 +7,102 @@ export interface MetaInteger {
 }
 
 
-export interface Uint8 extends MetaInteger {
+export interface Uint8Face extends MetaInteger {
     _uint8: boolean;
-    add(n: Uint8): Uint8;
-    sub(n: Uint8): Uint8;
-    mul(n: Uint8): Uint8;
-    div(n: Uint8): Uint8;
+    add(n: Uint8Face): Uint8Face;
+    sub(n: Uint8Face): Uint8Face;
+    mul(n: Uint8Face): Uint8Face;
+    div(n: Uint8Face): Uint8Face;
 }
-export interface Uint16 extends MetaInteger {
+export interface Uint16Face extends MetaInteger {
     _uint16: boolean;
-    add(n: Uint16): Uint16;
-    sub(n: Uint16): Uint16;
-    mul(n: Uint16): Uint16;
-    div(n: Uint16): Uint16;
+    add(n: Uint16Face): Uint16Face;
+    sub(n: Uint16Face): Uint16Face;
+    mul(n: Uint16Face): Uint16Face;
+    div(n: Uint16Face): Uint16Face;
 }
-export interface Uint32 extends MetaInteger {
+export interface Uint32Face extends MetaInteger {
     _uint32: boolean;
-    add(n: Uint32): Uint32;
-    sub(n: Uint32): Uint32;
-    mul(n: Uint32): Uint32;
-    div(n: Uint32): Uint32;
+    add(n: Uint32Face): Uint32Face;
+    sub(n: Uint32Face): Uint32Face;
+    mul(n: Uint32Face): Uint32Face;
+    div(n: Uint32Face): Uint32Face;
 }
-export interface Uint64 extends MetaInteger {
+export interface Uint64Face extends MetaInteger {
     _uint64: boolean;
-    add(n: Uint64): Uint64;
-    sub(n: Uint64): Uint64;
-    mul(n: Uint64): Uint64;
-    div(n: Uint64): Uint64;
+    add(n: Uint64Face): Uint64Face;
+    sub(n: Uint64Face): Uint64Face;
+    mul(n: Uint64Face): Uint64Face;
+    div(n: Uint64Face): Uint64Face;
 }
 
-export interface Uint128 extends MetaInteger {
+export interface Uint128Face extends MetaInteger {
     _uint128: boolean;
-    add(n: Uint128): Uint128;
-    sub(n: Uint128): Uint128;
-    mul(n: Uint128): Uint128;
-    div(n: Uint128): Uint128;
+    add(n: Uint128Face): Uint128Face;
+    sub(n: Uint128Face): Uint128Face;
+    mul(n: Uint128Face): Uint128Face;
+    div(n: Uint128Face): Uint128Face;
 }
 
-export interface Uint256 extends MetaInteger {
+export interface Uint256Face extends MetaInteger {
     _uint256: boolean;
-    add(n: Uint256): Uint256;
-    sub(n: Uint256): Uint256;
-    mul(n: Uint256): Uint256;
-    div(n: Uint256): Uint256;
+    add(n: Uint256Face): Uint256Face;
+    sub(n: Uint256Face): Uint256Face;
+    mul(n: Uint256Face): Uint256Face;
+    div(n: Uint256Face): Uint256Face;
 }
 
-export type Uint = Uint8 | Uint16 | Uint32 | Uint64 | Uint128 | Uint256;
+export type Uint = Uint8Face | Uint16Face | Uint32Face | Uint64Face | Uint128Face | Uint256Face;
 
-export interface Int8 extends MetaInteger {
+export interface Int8Face extends MetaInteger {
     _int8: boolean;
     _isPositive: boolean;
-    add(n: Int8): Int8;
-    sub(n: Int8): Int8;
-    mul(n: Int8): Int8;
-    div(n: Int8): Int8;
+    add(n: Int8Face): Int8Face;
+    sub(n: Int8Face): Int8Face;
+    mul(n: Int8Face): Int8Face;
+    div(n: Int8Face): Int8Face;
 }
-export interface Int16 extends MetaInteger {
+export interface Int16Face extends MetaInteger {
     _int16: boolean;
     _isPositive: boolean;
-    add(n: Int16): Int16;
-    sub(n: Int16): Int16;
-    mul(n: Int16): Int16;
-    div(n: Int16): Int16;
+    add(n: Int16Face): Int16Face;
+    sub(n: Int16Face): Int16Face;
+    mul(n: Int16Face): Int16Face;
+    div(n: Int16Face): Int16Face;
 }
-export interface Int32 extends MetaInteger {
+export interface Int32Face extends MetaInteger {
     _int32: boolean;
     _isPositive: boolean;
-    add(n: Int32): Int32;
-    sub(n: Int32): Int32;
-    mul(n: Int32): Int32;
-    div(n: Int32): Int32;
+    add(n: Int32Face): Int32Face;
+    sub(n: Int32Face): Int32Face;
+    mul(n: Int32Face): Int32Face;
+    div(n: Int32Face): Int32Face;
 }
-export interface Int64 extends MetaInteger {
+export interface Int64Face extends MetaInteger {
     _int64: boolean;
     _isPositive: boolean;
-    add(n: Int64): Int64;
-    sub(n: Int64): Int64;
-    mul(n: Int64): Int64;
-    div(n: Int64): Int64;
+    add(n: Int64Face): Int64Face;
+    sub(n: Int64Face): Int64Face;
+    mul(n: Int64Face): Int64Face;
+    div(n: Int64Face): Int64Face;
 }
 
-export interface Int128 extends MetaInteger {
+export interface Int128Face extends MetaInteger {
     _int128: boolean;
     _isPositive: boolean;
-    add(n: Int128): Int128;
-    sub(n: Int128): Int128;
-    mul(n: Int128): Int128;
-    div(n: Int128): Int128;
+    add(n: Int128Face): Int128Face;
+    sub(n: Int128Face): Int128Face;
+    mul(n: Int128Face): Int128Face;
+    div(n: Int128Face): Int128Face;
 }
 
-export interface Int256 extends MetaInteger {
+export interface Int256Face extends MetaInteger {
     _int256: boolean;
     _isPositive: boolean;
-    add(n: Int256): Int256;
-    sub(n: Int256): Int256;
-    mul(n: Int256): Int256;
-    div(n: Int256): Int256;
+    add(n: Int256Face): Int256Face;
+    sub(n: Int256Face): Int256Face;
+    mul(n: Int256Face): Int256Face;
+    div(n: Int256Face): Int256Face;
 }
 
-export type Int = Int8 | Int16 | Int32 | Int64 | Int128 | Int256 ;
+export type Int = Int8Face | Int16Face | Int32Face | Int64Face | Int128Face | Int256Face ;
