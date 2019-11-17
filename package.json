@@ -1,6 +1,6 @@
 {
   "name": "@1-corp/fixed-size-numbers-ts",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/index.ts",
   "types": "lib/index.d.ts",
